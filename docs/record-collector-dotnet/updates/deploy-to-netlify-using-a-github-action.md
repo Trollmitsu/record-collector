@@ -5,13 +5,13 @@ description: "How to set up deployment of a Record Collector site to Netlify usi
 categories:
   - Deployment
   - Automation
-images:
-  - /files/photo-1.jpg
 authorname: "Johan Kronberg"
 authorimage: "/files/jk.jpg"
 ---
-This definition will deploy your site to your Netlify site's production URL on **push to main** and deploy a draft that will get a preview URL on push to any other branch.
+This definition will deploy your site to your Netlify by building on GitHub.
 <!--more-->
+It will deploy to production (publish) on **push to main** and deploy a draft that will get a preview URL on push to any other branch.
+
 ## Update November 18th 2021
 
 YAML file now has .NET 6.0 support and npm steps for the CSS and JS setup used in the new default templates.
@@ -117,7 +117,7 @@ As you can see the environment name gets set to `Action` so in **appsettings.Act
 {
   "AppSettings": {
     "SiteUrl": "https://record-collector.netlify.app/",
-    "ContentRootPath": "/home/runner/work/record-collector/record-collector/docs/content-record-collector-net/",
+    "ContentRootPath": "/home/runner/work/record-collector/record-collector/content/demo-site/",
     "StaticSiteRootPath": "/home/runner/work/record-collector/record-collector/artifacts/static-site/",
     "FrontendSetup": "default",
     "ViewPrefix": "",
